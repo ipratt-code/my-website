@@ -3,10 +3,6 @@ app = Flask('app')
 
 @app.route('/')
 def hello_world():
-    return render_template('home.html')
+    return render_template('index.html')
 
-@app.route('/aboutme/')
-def aboutme():
-    return render_template('aboutme.html')
-
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=8080, debug=True)
