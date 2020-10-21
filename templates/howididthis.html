@@ -11,13 +11,102 @@
         <hr>
         <h1>How I did this</h1>
         <p>This was a <i>complicated</i> project.</p>
-        <p>I'm not gonna lie, if you do this, you need to meet these requirements to some extent</p>
         <p>Requriements:</p>
         <ul type="disc">
             <li>A computer</li>
             <li>An email address</li>
-            <li>Knowlege about Python</li>
-            <li>You know how to work with Flask & Gunicorn</li>
         </ul>
+        <p>Preferences:</p>
+        <ul>
+            <li>Backend Web-Dev skills (Python, <a href = "https://palletsprojects.com/p/flask/">Flask</a> and <a href = "https://gunicorn.org">Gunicorn</a>)</li>
+            <li>Frontend Web-Dev skills (HTML, CSS and JS)</li>
+            <li>A <a href="https://repl.it">repl.it</a> account</li>
+            <li>A <a href="https://freenom.com">Freenom</a> account</li>
+            <li>A <a href="https://cloudflare.com">Cloudflare</a> account</li>
+        </ul>
+        <h1>Part 1</h1>
+        <h6>Getting the domain</h6>
+        <p>
+            Go to <a href="https://freenom.com">Freenom</a>. The first thing
+            you should see is a bar that says Find a new FREE domain. Input what
+            you want your domain name to be. For example, ianpratt. Next, you
+            select one of the choices that pop up. Preferrably, the free option.
+            This is why I am assuming you are following my tutorial.
+        </p><br>
+        <p>
+            Once you have done this, go to checkout. Select period, and change it
+            for how long you want the registration period to last. Preferrably, choose
+            the longest time that is free for use. Don't worry, you can renew the
+            domain later. Once you have done that, it will ask you to either sign
+            in or make an account, or if you already logged in, it will redirect you
+            to your account and ask you to complete  the purchase. Either way, follow
+            Freenom's steps. It might say that it can't confirm that you are a human.
+            If so, wait it out a while and try again. Once you have secured your domain,
+            go to part 2.
+        </p>
+        <h1>Part 2</h1>
+        <h6>Setting up Repl.it</h6>
+        <p>
+            Log into <a href="https://repl.it">repl.it</a>. Create a new repl titled whatever you want, and make it a
+            <b><i>PYTHON</i></b> repl. This is important, we will use python to create a
+            WGSI server (via Gunicorn) and a Flask app. I will assume you know how to use Flask and Gunicorn.
+            There should be a file inside called main.py. Paste this into main.py:
+        </p>
+        <code>
+            from flask import Flask, render_template<br>
+            import gunicorn<br>
+            def app():<br>
+            &emsp;app = Flask('app')<br>
+            &emsp;@app.route('/')<br>
+            &emsp;def home():<br>
+            &emsp;&emsp;return 'Hello world!'<br>
+            &emsp;return app
+        </code>
+        <p>
+            If you already know how Flask and Gunicorn work together, do what you
+            like!
+        </p>
+        <p>
+            Next, create the .replit file. Paste this inside it:
+        </p>
+        <code>
+            language = "python3"<br>
+            run = "gunicorn -w 4 --reload -b 0.0.0.0:8080 \"main:app()\""
+        </code>
+        <p>
+            Again, if you already know how Flask and Gunicorn work together, as
+            well as how to configure ports on repl.it, play around with that.
+            Otherwise, don't change a thing.
+        </p>
+        <p>
+            Run the repl! You should see a blank page with the words "Hello world!" on
+            it. If you did, congradulations! The weirdest part of this process is over!
+        </p>
+        <h1>Part 3</h1>
+        <h6>Connecting Repl.it to your domain</h6>
+        <p>
+            Now, you need to sign up or log into <a href="https://cloudflare.com">Cloudflare</a>.
+            Click on the thing that says add site. It should show a window saying
+            "Enter your site (example.com)". Enter your domain you bought. (Ex. ianpratt.tk)
+            Follow the steps Cloudflare gives you. When it says to add the nameservers Cloudflare
+            gives you, go to Freenom and log in. Go to your domains, and click on Manage under
+            your domain you just bought. Go to DNS, and under DNS click on Nameservers.
+            Click on custom nameservers, and paste in the nameservers Cloudflare gave you.
+            Click on next, and it should check that the nameservers are there. Once this is done,
+            it will provide and verify a free SSL/TLS certificate. This can take up to a day to
+            finish the process, although it usually doesn't take that long. Meanwhile, click on
+            the little pencil icon next to the window pane in your repl. Enter your domain, and
+            it should reply back with a long, randomly generated link. Copy that and click next.
+        </p>
+        <p>
+            In Cloudflare, Click on DNS, and under that click on add new record. Change the 
+            record from "A" to "CNAME". Then, paste your link under the box that says "target",
+            and under "name" put in "@". Click on save, and now it's a waiting game. If
+            everything worked out well, a while later you should be able to go to your site in
+            your browser, and see "Hello world!" on your screen.
+        </p>
+        <p>
+            For further reading onto customizing your site, check out <a href="https://pythonspot.com/flask-web-app-with-python/">this link</a>.
+        </p>
     </body>
 </html>

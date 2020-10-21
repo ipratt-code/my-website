@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import gunicorn
 
-def create_app():
+def app():
 
     app = Flask('app')
 
