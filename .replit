@@ -1,2 +1,2 @@
 language = "python3"
-run = "python3 main.py"
+run = "gunicorn -w 4 --reload -b 0.0.0.0:8080 \"main:create_app()\""

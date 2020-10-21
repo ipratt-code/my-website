@@ -1,16 +1,28 @@
 from flask import Flask, render_template
-app = Flask('app')
+import gunicorn
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+def create_app():
 
-@app.route('/aboutme')
-def aboutme():
-    return render_template('aboutme.html')
+    app = Flask('app')
 
-@app.route('/otherwebsites')
-def otherwebsites():
-    return render_template('otherwebsites.html')
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+    @app.route('/aboutme')
+    def aboutme():
+        return render_template('aboutme.html')
+
+    @app.route('/otherwebsites')
+    def otherwebsites():
+        return render_template('otherwebsites.html')
+
+    @app.route('/github')
+    def github():
+        return render_template('github.html')
+
+    @app.route('/howididthis')
+    def howididthis():
+        return render_template('howididthis.html')
+    
+    return app
