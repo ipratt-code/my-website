@@ -1,2 +1,2 @@
 language = "python3"
-run = "gunicorn --reload \"main:app()\""
+run = "python3 pull.py && gunicorn --reload \"main:app()\""
