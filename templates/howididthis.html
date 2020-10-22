@@ -7,7 +7,7 @@
     <body>
         <h3>Hello, I am Ian Pratt</h3>
         <p><i>A simple programmer</i></p>
-        <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>
+        <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
         <hr>
         <h1>How I did this</h1>
         <p>This was a <i>complicated</i> project.</p>
@@ -18,7 +18,7 @@
         </ul>
         <p>Preferences:</p>
         <ul>
-            <li>Backend Web-Dev skills (Python, <a href = "https://palletsprojects.com/p/flask/">Flask</a> and <a href = "https://gunicorn.org">Gunicorn</a>)</li>
+            <li>Backend Web-Dev skills (we will be using Python, <a href = "https://palletsprojects.com/p/flask/">Flask</a> and <a href = "https://gunicorn.org">Gunicorn</a>)</li>
             <li>Frontend Web-Dev skills (HTML, CSS and JS)</li>
             <li>A <a href="https://repl.it">repl.it</a> account</li>
             <li>A <a href="https://freenom.com">Freenom</a> account</li>
@@ -49,8 +49,8 @@
         <p>
             Log into <a href="https://repl.it">repl.it</a>. Create a new repl titled whatever you want, and make it a
             <b><i>PYTHON</i></b> repl. This is important, we will use python to create a
-            WGSI server (via Gunicorn) and a Flask app. I will assume you know how to use Flask and Gunicorn.
-            There should be a file inside called main.py. Paste this into main.py:
+            WGSI server (via Gunicorn) and a Flask app. There should be a file inside called main.py.
+            Paste this into main.py:
         </p>
         <code>
             from flask import Flask, render_template<br>
@@ -107,6 +107,9 @@
         </p>
         <p>
             For further reading onto customizing your site, check out <a href="https://pythonspot.com/flask-web-app-with-python/">this link</a>.
+        </p>
+        <p>
+            This site is licensed under the MIT License. Check it out <a href="https://github.com/ipratt-code/my-website">here</a>!
         </p>
     </body>
 </html>
