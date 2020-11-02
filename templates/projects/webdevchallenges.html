@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ian Pratt | A simple programmer | about me</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
+    </head>
+    <body>
+        <h3>Hello, I am Ian Pratt</h3>
+        <p><i>A simple programmer</i></p>
+        <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
+        <hr>
+        <h1>My Web Dev challenges</h1>
+        <p>These are challenges set by my web dev teachers to help me learn web development.</p>
+		<p>Here they are!</p>
+		<p><i>web dev 1:</i></p>
+		<table>
+			<tr>
+				<th rowspan="6">Hours</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+			</tr>
+			<tr>
+				<td>science</th>
+				<td>math</th>
+				<td>science</th>
+				<td>math</th>
+				<td>art</th>
+			</tr>
+			<tr>
+				<td>social</th>
+				<td>history</th>
+				<td>english</th>
+				<td>social</th>
+				<td>art</th>
+			</tr>
+			<tr>
+				<td colspan="5">lunch</td>
+			</tr>
+			<tr>
+				<td>science</th>
+				<td>math</th>
+				<td>science</th>
+				<td>math</th>
+				<td rowspan="2">project</th>
+			</tr>
+			<tr>
+				<td>social</th>
+				<td>history</th>
+				<td>english</th>
+				<td>social</th>
+			</tr>
+		</table>
+
+    </body>
+</html>

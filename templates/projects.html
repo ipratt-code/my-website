@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
         <meta charset="utf-8">
-        <title>Ian Pratt | A simple programmer | about me</title>
+        <title>Ian Pratt | A simple programmer | other websites</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
     </head>
     <body>
@@ -10,9 +10,9 @@
         <p><i>A simple programmer</i></p>
         <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
         <hr>
-        <h1>About me</h1>
-        <p>I am a 14 year old programmer who primarily works in python and golang.</p>
-        <p>My github page is <a href="https://github.com/ipratt-code">here</a>, if you want to check it out.</p>
-
+        <h1>My Projects</h1>
+        <ul>
+			<li><a href="{{url_for('webdevchallenges')}}">My web development challenges</a></li>
+		</ul>
     </body>
 </html>
