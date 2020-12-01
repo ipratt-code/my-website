@@ -2,8 +2,8 @@
 
 body {
 	font-family: 'Comfortaa', cursive;
-	background: #1F5A5A;
-	color: white;
+	background: #40a6ff;
+	color: black;
 }
 
 iframe{
@@ -11,14 +11,20 @@ iframe{
 }
 
 a:link{
-	color: #0F2C16;
+	color: #009933;
 }
 
 a:visited{
-	color: #1D0F2C;
+	color: #3A0DCC;
 }
 
 img.logo{
 	height: 50px;
 	width: 50px;
+}
+.credits{
+    font-size:8px;
+}
+#indexMugShot{
+    height: 70px;
 }
