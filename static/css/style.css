@@ -5,7 +5,7 @@ body {
 	background: #40a6ff;
 	color: black;
 }
-
+/* NOT USED NOW - NO IFRAMES IN USE (so far) */
 iframe{
 	border-style: none;
 }
@@ -26,5 +26,13 @@ img.logo{
     font-size:8px;
 }
 #indexMugShot{
-    height: 70px;
+    width: 100px;
+}
+
+table {
+    text-align: center;
+}
+
+h1 {
+    color:darkblue;
 }

@@ -1,36 +1,41 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 import gunicorn
+import os
 
 def app():
 
-	app = Flask('app')
+    app = Flask('app')
 
-	@app.route('/')
-	def home():
-		return render_template('index.html')
+    @app.route('/favicon.ico')
+    def favicon():
+        return send_from_directory(os.path.join(app.root_path, 'static'),'favicon/favicon.ico', mimetype='image/vnd.microsoft.icon')
+    
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
-	@app.route('/aboutme')
-	def aboutme():
-		return render_template('aboutme.html')
+    @app.route('/aboutme')
+    def aboutme():
+        return render_template('aboutme.html')
 
-	@app.route('/otherwebsites')
-	def otherwebsites():
-		return render_template('otherwebsites.html')
+    @app.route('/otherwebsites')
+    def otherwebsites():
+        return render_template('otherwebsites.html')
 
-	@app.route('/github')
-	def github():
-		return render_template('github.html')
+    @app.route('/github')
+    def github():
+        return render_template('github.html')
 
-	@app.route('/howididthis')
-	def howididthis():
-		return render_template('howididthis.html')
+    @app.route('/howididthis')
+    def howididthis():
+        return render_template('howididthis.html')
 
-	@app.route('/projects')
-	def projects():
-		return render_template('projects.html')
-	
-	@app.route('/projects/webdevchallenges')
-	def webdevchallenges():
-		return render_template('projects/webdevchallenges.html')
+    @app.route('/projects')
+    def projects():
+        return render_template('projects.html')
 
-	return app
+    @app.route('/projects/webdevchallenges')
+    def webdevchallenges():
+        return render_template('projects/webdevchallenges.html')
+
+    return app
