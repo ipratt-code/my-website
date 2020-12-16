@@ -1,0 +1,2 @@
+#!/bin/bash
+gunicorn --reload "main:app()" || killall -9 gunicorn && gunicorn --reload "main:app()"

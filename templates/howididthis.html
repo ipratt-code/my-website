@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Ian Pratt | A simple programmer | my github page</title>
-		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
-    </head>
-    <body>
-        <h3>Hello, I am Ian Pratt</h3>
-        <p><i>A simple programmer</i></p>
-        <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
-        <hr>
-        <h1>How I did this</h1>
+
+<head>
+	<meta charset="utf-8">
+	<title>Ian Pratt | A simple programmer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+	</script>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body>
+	<header class="header">
+		<h3>Hello, I am Ian Pratt</h3>
+		<p><i>A simple programmer</i></p>
+		<nav class="navbar navbar-style">
+        	<a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
+		</nav>
+    </header>
+		<div class="content">
+		<h1>How I did this</h1>
         <p>This was a <i>complicated</i> project.</p>
         <p>Requriements:</p>
         <ul type="disc">
@@ -25,6 +39,8 @@
             <li>A <a href="https://freenom.com">Freenom</a> account</li>
             <li>A <a href="https://cloudflare.com">Cloudflare</a> account</li>
         </ul>
+		</div>
+		<div class="content">
         <h1>Part 1</h1>
         <h6>Getting the domain</h6>
         <p>
@@ -45,6 +61,8 @@
             If so, wait it out a while and try again. Once you have secured your domain,
             go to part 2.
         </p>
+		</div>
+		<div class="content">
         <h1>Part 2</h1>
         <h6>Setting up Repl.it</h6>
         <p>
@@ -83,6 +101,8 @@
             Run the repl! You should see a blank page with the words "Hello world!" on
             it. If you did, congradulations! The most complicated part of this process is over!
         </p>
+		</div>
+		<div class="content">
         <h1>Part 3</h1>
         <h6>Connecting Repl.it to your domain</h6>
         <p>
@@ -109,8 +129,18 @@
         <p>
             For further reading onto customizing your site, check out <a href="https://pythonspot.com/flask-web-app-with-python/">this link</a>.
         </p>
-        <p>
+		</div>
+		<div class="content">
+			<p>This site is hosted by repl.it.</p>
+			<p>This is the code for my website, right here!<p>
+			<iframe height="400px" width="100%" src="https://repl.it/@thingcoder1/my-website?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+		</div>
+		<div class="footer">
+        <p>This site is hosted by <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg"> repl.it. They are amazing</p>
+	<p class="credits"><i>This image is from repl.it. All credits go to them</i></p>
+		<p>
             This site is licensed under the MIT License. Check it out <a href="https://github.com/ipratt-code/my-website">here</a>!
         </p>
+		</div>
     </body>
 </html>

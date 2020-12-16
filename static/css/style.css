@@ -19,8 +19,8 @@ a:visited{
 }
 
 img.logo{
-	height: 50px;
-	width: 50px;
+	height: 15px;
+	width: 15px;
 }
 .credits{
     font-size:8px;
@@ -35,4 +35,31 @@ table {
 
 h1 {
     color:darkblue;
+}
+div.content, div.footer{
+	background-color:#4053ff;
+	width:45%;
+	left:27.5%;
+	text-align:center;
+	position: relative;
+}
+
+div a:link{
+	color: #06c90f;
+}
+
+div a:visited{
+	color: rgb(38, 9, 133);
+}
+header{
+	text-align: center;
+}
+.footer{
+	font-size:9px
+}
+.content{
+	font-size: 15px;
+}
+div>code{
+	text-align:left;
 }

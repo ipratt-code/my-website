@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8">
-        <title>Ian Pratt | A simple programmer | other websites</title>
-		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
-    </head>
-    <body>
-        <h3>Hello, I am Ian Pratt</h3>
-        <p><i>A simple programmer</i></p>
-        <a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
-        <hr>
-        <h1>My Projects</h1>
+
+<head>
+	<meta charset="utf-8">
+	<title>Ian Pratt | A simple programmer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+	</script>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body>
+	<header class="header">
+		<h3>Hello, I am Ian Pratt</h3>
+		<p><i>A simple programmer</i></p>
+		<nav class="navbar navbar-style">
+        	<a href="{{url_for('home')}}">back to home</a>|<a href="{{url_for('aboutme')}}">about me</a>|<a href="{{url_for('otherwebsites')}}">other interesting websites</a>|<a href="{{url_for('github')}}">my Github page</a>|<a href="{{url_for('howididthis')}}">how i did this</a>|<a href="{{url_for('projects')}}">projects</a>|<a href="https://stats.ianpratt.tk/" target="_blank">server statistics</a>
+		</nav>
+    </header>
+	<div class="content">
+	<h1>My Projects</h1>
         <ul>
-			<li><a href="{{url_for('webdevchallenges')}}">My web development challenges</a></li>
+			<li><a href="{{url_for('webdevchallenges')}}">My web development challenges for Lane Tech 2020 Web Dev 1</a></li>
+			<li><a href="{{url_for('ltscifair2020')}}">Lane Tech Science fair 2020 - 2021</a></li>
+			<li><a href="{{url_for('imagefilters')}}">CSS image filters playground</a></li>
 		</ul>
+	</div>
+	<div class="footer">
+        <p>This site is hosted by <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg"> repl.it. They are amazing</p>
+	<p class="credits"><i>This image is from repl.it. All credits go to them</i></p>
+		<p>
+            This site is licensed under the MIT License. Check it out <a href="https://github.com/ipratt-code/my-website">here</a>!
+        </p>
+	</div>
     </body>
 </html>
