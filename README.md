@@ -1,7 +1,5 @@
 # my-website
 This is my website. 
 
-# setting up
-To run this website (on a UNIX environment), first install python.
-Then, run `make` to install dependencies
-Once this is completed, the webserver should have started up.
+# THE CODE IS DEPRECIATED. YOU SHOULD GO HERE INSTEAD:
+[This is the previous code](https://github.com/ipratt-code/my-website)
